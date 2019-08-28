@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Message } from "./Message";
 
 export const MessagesList = ({ messages }) => {
+  if (messages === undefined) return null;
   return (
     <section id="messages-list">
       <ul>

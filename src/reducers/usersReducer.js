@@ -1,21 +1,23 @@
 import * as types from "../constants/ActionTypes";
 
-const initialState = [{}];
+const initialState = [];
 
-export const usersReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
+const usersReducer = (state = initialState, action) => {
+  switch (action.type) {
     case types.ADD_USER:
       return state.concat([
         {
-          id: payload.id,
-          name: payload.name
+          id: action.id,
+          name: action.name
         }
       ]);
 
     case types.USER_LIST:
-      return payload.user;
+      return action.users;
 
     default:
       return state;
   }
 };
+
+export default usersReducer;

@@ -1,19 +1,21 @@
 import * as types from "../constants/ActionTypes";
 
-const INITIAL_STATE = [{}];
+const INITIAL_STATE = [];
 
-export const messagesReducer = (state = INITIAL_STATE, { type, payload }) => {
-  switch (type) {
+const messagesReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
     case types.ADD_MESSAGE:
     case types.MESSAGE_RECEIVED:
       return state.concat([
         {
-          message: payload.message,
-          author: payload.author,
-          id: payload.id
+          message: action.message,
+          author: action.author,
+          id: action.id
         }
       ]);
     default:
       return state;
   }
 };
+
+export default messagesReducer;

@@ -1,14 +1,18 @@
 import React from "react";
 import "./App.css";
-import { Sidebar, MessagesList, AddMessage } from "./components";
+import {
+  AddMessageContainer,
+  SidebarContainer,
+  MessagesListContainer
+} from "./containers";
 
 function App() {
   return (
     <div id="container">
-      <Sidebar />
+      <SidebarContainer />
       <section id="main">
-        <MessagesList />
-        <AddMessage />
+        <MessagesListContainer />
+        <AddMessageContainer />
       </section>
     </div>
   );
