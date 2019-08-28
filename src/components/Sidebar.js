@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Sidebar = ({ users }) => {
-  console.log(users);
   if (users === undefined) return null;
   return (
     <aside id="sidebar" className="sidebar">

@@ -8,6 +8,6 @@ export const Message = ({ message, author }) => (
 );
 
 Message.propTypes = {
-  dispatch: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired
 };

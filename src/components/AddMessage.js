@@ -5,10 +5,10 @@ export const AddMessage = props => {
   return (
     <section id="new-message">
       <input
-        onKeyPress={(event, { value }) => {
+        onKeyPress={event => {
           if (event.key === "Enter") {
-            props.dispatch(value, "Me");
-            value = "";
+            props.dispatch(event.target.value, "Me");
+            event.target.value = "";
           }
         }}
       />
