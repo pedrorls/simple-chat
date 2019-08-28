@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Sidebar, MessagesList, AddMessage } from "./containers";
+import { Sidebar, MessagesList, AddMessage } from "./components";
 
 function App() {
   return (
