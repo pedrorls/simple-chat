@@ -31,7 +31,7 @@ wss.on("connection", ws => {
             type: "USERS_LIST",
             users
           },
-          WaveShaperNode
+          ws
         );
         break;
       }
